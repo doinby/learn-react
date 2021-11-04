@@ -1,16 +1,19 @@
 import React from 'react';
-import {withToggler} from './HOCs/withToggler';
+import Toggler from './components/Toggler';
 
-function Favourite(props) {
+export default function Favourite(props) {
   return (
-    <div className='toggle-favourite'>
-      <h2>Click 💚 to favourite</h2>
-      <div className='favourite-btn' onClick={props.toggle}>
-        {props.on ? '💚' : '🤍'}
-      </div>
-    </div>
+    <Toggler
+      render={(isOn, toggle) => {
+        return (
+          <div className='toggle-favourite'>
+            <h2>Click 💚 to favourite</h2>
+            <div className='favourite-btn' onClick={toggle}>
+              {isOn ? '💚' : '🤍'}
+            </div>
+          </div>
+        );
+      }}
+    />
   );
 }
-
-const superFavouriteComponent = withToggler(Favourite);
-export default superFavouriteComponent;

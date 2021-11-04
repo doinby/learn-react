@@ -1,23 +1,30 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import {withToggler} from './HOCs/withToggler';
+import React, {useState} from 'react';
+// import {withToggler} from './HOCs/withToggler';
+import Toggler from './components/Toggler';
 
-function Menu(props) {
+export default function Menu() {
   return (
-    <div className='toggle-menu'>
-      <button onClick={props.toggle}>
-        {!props.on ? 'Hide Menu' : 'Show Menu'}
-      </button>
-      <nav style={{display: !props.on ? 'flex' : 'none'}}>
-        <h2>Signed in as Coder123</h2>
-        <a href='https://'>Your Profile</a>
-        <a href='https://'>Your Repositories</a>
-        <a href='https://'>Your Stars</a>
-        <a href='https://'>Your Gists</a>
-      </nav>
-    </div>
+    <Toggler
+      render={(isOn, toggle) => {
+        return (
+          <div className='toggle-menu'>
+            <button onClick={toggle}>
+              {!isOn ? 'Hide Menu' : 'Show Menu'}
+            </button>
+            <nav style={{display: `${!isOn ? 'flex' : 'none'}`}}>
+              <h2>Signed in as user123</h2>
+              <a href='https://'>Yout Profile</a>
+              <a href='https://'>Yout Repositories</a>
+              <a href='https://'>Yout Stars</a>
+              <a href='https://'>Yout Gists</a>
+            </nav>
+          </div>
+        );
+      }}
+    />
   );
 }
 
-const superMenuComponent = withToggler(Menu);
-export default superMenuComponent;
+// const superMenuComponent = withToggler(Menu);
+// export default superMenuComponent;
