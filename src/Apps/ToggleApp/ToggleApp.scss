@@ -1,0 +1,28 @@
+@import '../../index.scss';
+
+hr {
+  margin: 1.5rem 0;
+}
+
+.toggle-menu {
+  button {
+    margin-bottom: 2rem;
+  }
+
+  nav {
+    @include flex(column);
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.toggle-favourite {
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .favourite-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
