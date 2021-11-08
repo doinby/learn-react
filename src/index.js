@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ToggleApp from './Apps/ToggleApp/ToggleApp';
+// import ToggleApp from './Apps/ToggleApp/ToggleApp';
+import DataFetcherApp from './Apps/DataFetcherApp/DataFetcherApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ToggleApp />
+    <DataFetcherApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
