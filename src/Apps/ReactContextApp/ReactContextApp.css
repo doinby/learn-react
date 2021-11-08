@@ -28,14 +28,7 @@ a {
   color: #d5006a;
 }
 
-hr {
-  margin: 1.5rem 0;
-}
-
-.toggle-menu button {
-  margin-bottom: 2rem;
-}
-.toggle-menu nav {
+#root {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,16 +36,38 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 1rem;
+  place-items: center;
+  width: 100%;
+}
+#root header {
+  padding: 1.5rem 0;
+  margin-bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
+#root header h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+#root button {
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  font-weight: 700;
 }
 
-.toggle-favourite h2 {
-  margin-bottom: 1rem;
+header.light-theme,
+button.light-theme {
+  background: lightgray;
 }
-.toggle-favourite .favourite-btn {
-  font-size: 1.5rem;
-  cursor: pointer;
+
+button.light-theme:hover,
+button.light-theme:active {
+  background: #444444;
+  color: white;
+}
+
+header.dark-theme,
+button.dark-theme {
+  background: #444444;
+  color: white;
 }

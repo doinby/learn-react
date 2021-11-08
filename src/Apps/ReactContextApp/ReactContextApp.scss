@@ -1,0 +1,42 @@
+@import '../../index.scss';
+
+#root {
+  @include flex(column);
+  place-items: center;
+  width: 100%;
+
+  header {
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+  }
+
+  button {
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    font-weight: 700;
+  }
+}
+
+header.light-theme,
+button.light-theme {
+  background: lightgray;
+}
+
+button.light-theme:hover,
+button.light-theme:active {
+  background: rgb(68, 68, 68);
+  color: white;
+}
+
+header.dark-theme,
+button.dark-theme {
+  background: rgb(68, 68, 68);
+  color: white;
+}
