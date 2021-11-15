@@ -15,6 +15,7 @@
 }
 
 body {
+  @include reset-spacing();
   font-family: 'Source Sans Pro', sans-serif;
 }
 
