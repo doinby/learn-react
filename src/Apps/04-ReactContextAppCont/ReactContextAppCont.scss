@@ -1,7 +1,7 @@
-@import '../../index.scss';
 
 #root {
-  @include flex(column);
+  display: flex;
+  flex-direction: column;
   place-items: center;
   width: 100%;
 
@@ -39,4 +39,10 @@ header.dark-theme,
 button.dark-theme {
   background: rgb(68, 68, 68);
   color: white;
+}
+
+button.dark-theme:hover,
+button.dark-theme:active {
+  background: lightgray;
+  color: rgb(68, 68, 68);
 }

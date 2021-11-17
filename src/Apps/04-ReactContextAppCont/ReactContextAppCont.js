@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from './components/Button';
 import Header from './components/Header';
-import ThemeContext from './ThemeContext';
 import './ReactContextAppCont.css';
+import { ThemeContextConsumer } from './ThemeContext';
 
 export default function ReactContextAppCont() {
   return (
@@ -10,9 +10,12 @@ export default function ReactContextAppCont() {
       <Header />
 
       {/* This button change with the theme */}
-      <ThemeContext.Consumer>
-        {(theme) => <Button theme={theme} display='Themed Button' />}
-      </ThemeContext.Consumer>
+      <ThemeContextConsumer>
+        {(provObject) => {
+          const { theme, toggleTheme } = provObject;
+          return <Button theme={theme} display='Themed Button' onCLick={toggleTheme} />;
+        }}
+      </ThemeContextConsumer>
 
       <br />
 
