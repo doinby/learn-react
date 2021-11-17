@@ -1,18 +1,22 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactContextApp from './Apps/ReactContextApp/ReactContextApp';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
-import ThemeContext from './Apps/ReactContextApp/ThemeContext';
+import './fonts/MinigapLight.woff';
+import './fonts/MinigapLight.woff2';
+import './fonts/MinigapBold.woff';
+import './fonts/MinigapBold.woff2';
+import './index.css';
+import ReactContextAppContCont from './Apps/05-ReactContextAppContCont/ReactContextAppContCont';
+import UserContext from './Apps/05-ReactContextAppContCont/UserContext'
 
 // Alt way to write:
 // const {Provider, Consumer} = ThemeContext
 
 ReactDOM.render(
-  <ThemeContext.Provider value={'dark'}>
-    <ReactContextApp />
-  </ThemeContext.Provider>,
+  <UserContext.Provider value='user123'>
+    <ReactContextAppContCont />
+  </UserContext.Provider>,
   document.getElementById('root')
 );
 
@@ -21,4 +25,4 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-// console.clear();
+console.clear();
