@@ -7,16 +7,16 @@ import './fonts/MinigapLight.woff2';
 import './fonts/MinigapBold.woff';
 import './fonts/MinigapBold.woff2';
 import './index.css';
-import {ThemeContextProvider} from './Apps/04-ReactContextAppCont/ThemeContext';
-import ReactContextAppCont from './Apps/04-ReactContextAppCont/ReactContextAppCont';
+import { UserContextProvider } from './Apps/05-ReactContextAppContCont/UserContext';
+import ReactContextAppContCont from './Apps/05-ReactContextAppContCont/ReactContextAppContCont'
 
 // Alt way to write:
 // const {Provider, Consumer} = ThemeContext
 
 ReactDOM.render(
-  <ThemeContextProvider>
-    <ReactContextAppCont />
-  </ThemeContextProvider>,
+  <UserContextProvider>
+    <ReactContextAppContCont />
+  </UserContextProvider>,
   document.getElementById('root')
 );
 

@@ -8,3 +8,27 @@ header {
   background: rgb(34, 34, 34);
   color: white;
 }
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  place-items: flex-start;
+  padding: 2rem 0;
+  
+  input {
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 1rem;
+    width: 65%;
+    font-size: 1.1rem;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    font-family: 'MinigapBold';
+    // text-transform: uppercase;
+    font-size: 1.1rem;
+    background: lightgray;
+  }
+}
+

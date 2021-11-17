@@ -6,3 +6,28 @@ header {
   background: #222222;
   color: white;
 }
+
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-items: flex-start;
+  padding: 2rem 0;
+}
+.settings input {
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 1rem;
+  width: 65%;
+  font-size: 1.1rem;
+}
+.settings button {
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  font-family: "MinigapBold";
+  font-size: 1.1rem;
+  background: lightgray;
+}

@@ -1,14 +1,16 @@
 import React from 'react';
-import UserContext from '../UserContext';
+import { UserContextConsumer } from '../UserContext';
 
 export default function Header() {
     return (
-      <UserContext.Consumer>
-        {(username) => (
+      <UserContextConsumer>
+        
+        {/* Destructuring username from Provider's object-typed value */}
+        {({username}) => (
           <header>
-            <h1>{`Welcome ${username}!`}</h1>
+            <h1>{`Welcome back, ${username}!`}</h1>
           </header>
         )}
-      </UserContext.Consumer>
+      </UserContextConsumer>
     );
 }
