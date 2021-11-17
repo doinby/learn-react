@@ -1,8 +1,10 @@
-import React, {useContext} from 'react';
-import ThemeContext from '../ThemeContext';
+import React from 'react';
 
-export default function Button() {
-  const themeContext = useContext(ThemeContext);
-
-  return <button className={`${themeContext}-theme`}>Button</button>;
+export default function Button(props) {
+  const { display, theme } = props;
+  return (
+    <button className={`${theme}-theme`}>
+      {display}
+    </button>
+  );
 }

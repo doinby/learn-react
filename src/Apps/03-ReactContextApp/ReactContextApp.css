@@ -1,13 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("//hello.myfonts.net/count/403ecc");
+@font-face {
+  font-family: "MinigapLight";
+  src: url("./fonts/MinigapLight.woff2") format("woff2"), url("./fonts/MinigapLight.woff") format("woff");
+  font-weight: light;
+}
+@font-face {
+  font-family: "MinigapBold";
+  src: url("./fonts/MinigapBold.woff2") format("woff2"), url("./fonts/MinigapBold.woff") format("woff");
+  font-weight: bold;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
+  font-family: "MinigapLight";
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "MinigapBold";
 }
 
 h1,
